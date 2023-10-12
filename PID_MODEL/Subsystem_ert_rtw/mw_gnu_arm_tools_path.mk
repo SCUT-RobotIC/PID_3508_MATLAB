@@ -1,0 +1,1 @@
+MW_GNU_ARM_TOOLS_PATH = C:/ProgramData/MATLAB/SupportPackages/R2023a/3P.instrset/gnuarm-armcortex.instrset/win/bin
