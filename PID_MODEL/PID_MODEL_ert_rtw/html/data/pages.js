@@ -1,0 +1,1 @@
+var reportPages = [["摘要","PID_MODEL_survey.html"],["子系统报告","PID_MODEL_subsystems.html"],["代码接口报告","PID_MODEL_interface.html"],["可追溯性报告","PID_MODEL_trace.html"],["静态代码度量报告","PID_MODEL_metrics.html"],["代码替换报告","PID_MODEL_replacements.html"],["代码生成器假设","PID_MODEL_coderassumptions.html"]];

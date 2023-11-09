@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Subsystem'.
  *
- * Model version                  : 1.29
+ * Model version                  : 1.31
  * Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
- * C/C++ source code generated on : Thu Oct 12 16:09:42 2023
+ * C/C++ source code generated on : Thu Nov  9 21:28:02 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M

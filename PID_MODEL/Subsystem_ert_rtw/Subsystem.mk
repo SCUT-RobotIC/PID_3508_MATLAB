@@ -2,7 +2,7 @@
 ## Makefile generated for component 'Subsystem'. 
 ## 
 ## Makefile     : Subsystem.mk
-## Generated on : Wed Oct 11 15:50:31 2023
+## Generated on : Thu Nov 09 21:28:08 2023
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/Subsystem.elf
 ## Product type : executable
 ## 
@@ -23,7 +23,7 @@ MAKEFILE                  = Subsystem.mk
 MATLAB_ROOT               = F:/Matlab
 MATLAB_BIN                = F:/Matlab/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
-START_DIR                 = F:/THE_LIBRARY/CODE_BASE/ROBOSERVO/PID_3508_MATLABVER/PID_MODEL
+START_DIR                 = F:/THE_LIBRARY/CODE_BASE/ROBOSERVO/PID_3508_MATLABVER/MATLAB_PID3508-master/MATLAB_PID3508-master/PID_MODEL
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
