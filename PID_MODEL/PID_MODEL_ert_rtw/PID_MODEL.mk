@@ -2,7 +2,7 @@
 ## Makefile generated for component 'PID_MODEL'. 
 ## 
 ## Makefile     : PID_MODEL.mk
-## Generated on : Thu Nov 09 21:28:33 2023
+## Generated on : Sun Nov 12 18:38:57 2023
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/PID_MODEL.elf
 ## Product type : executable
 ## 
@@ -20,10 +20,10 @@
 
 PRODUCT_NAME              = PID_MODEL
 MAKEFILE                  = PID_MODEL.mk
-MATLAB_ROOT               = F:/Matlab
-MATLAB_BIN                = F:/Matlab/bin
+MATLAB_ROOT               = D:/PROGRA~2/MATLAB/R2023b
+MATLAB_BIN                = D:/PROGRA~2/MATLAB/R2023b/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
-START_DIR                 = F:/THE_LIBRARY/CODE_BASE/ROBOSERVO/PID_3508_MATLABVER/MATLAB_PID3508-master/MATLAB_PID3508-master/PID_MODEL
+START_DIR                 = D:/Study/University/RobotIC/Robocon/3508PID/PID_3508_MATLAB/PID_MODEL
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
@@ -41,7 +41,7 @@ CPP_STANDARD_OPTS         =
 
 # Toolchain Name:          GNU Tools for ARM Embedded Processors
 # Supported Version(s):    
-# ToolchainInfo Version:   2023a
+# ToolchainInfo Version:   2023b
 # Specification Revision:  1.0
 # 
 #-------------------------------------------
@@ -367,7 +367,7 @@ execute : download
 
 $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(MAIN_OBJ)
 	@echo "### Creating standalone executable "$(PRODUCT)" ..."
-	$(CPP_LD) $(CPP_LDFLAGS) -o $(PRODUCT) @$(CMD_FILE) $(SYSTEM_LIBS) $(TOOLCHAIN_LIBS)
+	$(LD) $(LDFLAGS) -o $(PRODUCT) @$(CMD_FILE) $(SYSTEM_LIBS) $(TOOLCHAIN_LIBS)
 	@echo "### Created: $(PRODUCT)"
 
 
@@ -544,6 +544,34 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(MAIN_OBJ)
 
 
 %.o : $(MATLAB_ROOT)/simulink/src/%.cxx
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/simulink/blocks/src/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/simulink/blocks/src/%.s
+	$(AS) $(ASFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/simulink/blocks/src/%.S
+	$(AS) $(ASFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/simulink/blocks/src/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/simulink/blocks/src/%.cc
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/simulink/blocks/src/%.C
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/simulink/blocks/src/%.cxx
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
